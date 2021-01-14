@@ -1,0 +1,38 @@
+.home {
+    font-family: 'Viga', sans-serif;
+    font-size: large;
+    float: left;
+    color: rgba(0, 162, 182, 1);
+    background-color: rgb(94, 86, 87);
+    border-radius: 10px;
+    border: 5px solid rgb(94, 86, 87);
+    box-shadow: 5px 5px rgb(199, 199, 199);
+    height: 50px;
+    width: 150px;
+}
+.home:hover {
+    background-color: rgb(138, 132, 133);
+    border: 5px solid rgb(138, 132, 133)
+}
+.scores {
+    font-family: 'Viga', sans-serif;
+    font-size: large;
+    float: right;
+    color: rgba(0, 162, 182, 1);
+    background-color: rgb(94, 86, 87);
+    border-radius: 10px;
+    border: 5px solid rgb(94, 86, 87);
+    box-shadow: 5px 5px rgb(199, 199, 199);
+    height: 50px;
+    width: 150px;
+}
+.scores:hover {
+    background-color: rgb(138, 132, 133);
+    border: 5px solid rgb(138, 132, 133)
+}
+.header {
+    text-align: center;
+    color: rgba(0, 162, 182, 1);
+    font-family: 'Viga', sans-serif;
+    font-size: 40px;
+}
