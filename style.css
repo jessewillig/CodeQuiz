@@ -1,4 +1,4 @@
-.home {
+.homeBtn {
     font-family: 'Viga', sans-serif;
     font-size: large;
     float: left;
@@ -10,11 +10,11 @@
     height: 50px;
     width: 150px;
 }
-.home:hover {
+.homeBtn:hover {
     background-color: rgb(138, 132, 133);
     border: 5px solid rgb(138, 132, 133);
 }
-.scores {
+.scoresBtn {
     font-family: 'Viga', sans-serif;
     font-size: large;
     float: right;
@@ -26,7 +26,7 @@
     height: 50px;
     width: 150px;
 }
-.scores:hover {
+.scoresBtn:hover {
     background-color: rgb(138, 132, 133);
     border: 5px solid rgb(138, 132, 133);
 }
@@ -44,7 +44,7 @@
     height: 25vh;
     background-color: chartreuse;
 }
-.play {
+.playBtn {
     font-family: 'Viga', sans-serif;
     font-size: large;
     float: left;
@@ -56,7 +56,7 @@
     height: 50px;
     width: 150px;
 }
-.play:hover {
+.playBtn:hover {
     background-color: rgb(138, 132, 133);
     border: 5px solid rgb(138, 132, 133);
 }

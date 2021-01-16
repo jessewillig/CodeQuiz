@@ -1,8 +1,8 @@
-var home = document.querySelector(".home");
-var scores = document.querySelector(".scores");
-var play = document.querySelector(".play");
-var start = document.querySelector(".start")
-var game = document.querySelector(".game")
+var homeBtn = document.querySelector(".homeBtn");
+var scoresBtn = document.querySelector(".scoresBtn");
+var playBtn = document.querySelector(".playBtn");
+var startPage = document.querySelector(".start")
+var gamePlay = document.querySelector(".game")
 var answer1 = document.querySelector("#answer1");
 var answer2 = document.querySelector("#answer2");
 var answer3 = document.querySelector("#answer3");
@@ -31,7 +31,7 @@ var questions = [
     }
 ];
 
-home.addEventListener("click", function() {
+homeBtn.addEventListener("click", function() {
     // If/else statement for home button
     if (home === true) {
         // If on home screen, refresh page
