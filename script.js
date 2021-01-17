@@ -1,12 +1,14 @@
 var homeBtn = document.querySelector(".homeBtn");
 var scoresBtn = document.querySelector(".scoresBtn");
 var playBtn = document.querySelector(".playBtn");
-var startPage = document.querySelector(".start")
-var gamePlay = document.querySelector(".game")
-var answer1 = document.querySelector("#answer1");
-var answer2 = document.querySelector("#answer2");
-var answer3 = document.querySelector("#answer3");
-var answer4 = document.querySelector("#answer4");
+var startPage = document.querySelector(".startPage")
+var gamePlay = document.querySelector(".gamePlay")
+var answer1 = document.querySelector(".answer1");
+var answer2 = document.querySelector(".answer2");
+var answer3 = document.querySelector(".answer3");
+var answer4 = document.querySelector(".answer4");
+var question = document.querySelector(".question");
+var quesCounter = 0;
 // questions/answers
 var questions = [
     {
@@ -40,4 +42,9 @@ homeBtn.addEventListener("click", function() {
         // If not on home screen, return to home screen
         
     }
+}
+
+function quesAns(quesCounter) {
+    gamePlay.style.display = "block";
+    question.textContent =
 }
