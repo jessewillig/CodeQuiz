@@ -46,5 +46,11 @@ homeBtn.addEventListener("click", function() {
 
 function quesAns(quesCounter) {
     gamePlay.style.display = "block";
-    question.textContent =
+    question.textContent = questions[quesCounter].title;
+    answer1.textContent = questions[quesCounter].options[0];
+    answer2.textContent = questions[quesCounter].options[1];
+    answer3.textContent = questions[quesCounter].options[2];
+    answer4.textContent = questions[quesCounter].options[3];
 }
+
+quesAns();
