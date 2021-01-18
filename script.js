@@ -9,7 +9,13 @@ var answer3 = document.querySelector(".answer3");
 var answer4 = document.querySelector(".answer4");
 var question = document.querySelector(".question");
 var ansBtn = document.querySelector("#ansBtn");
+var buttons = document.querySelector(".buttons");
 var quesCounter = 0;
+var intervalId;
+var rightAnswer = 0;
+var wrongAnswer = 0;
+var notAnswered = 0;
+var currentQues;
 // questions/answers
 var questions = [
     {
@@ -35,18 +41,66 @@ var questions = [
 ];
 var questLength = questions.length;
 
-gamePlay.style.display = "none";
-
 playBtn.addEventListener("click", function() {
     quesAns();
 }
 
 function right() {
-    
+    ansBtn.addEventListener("click");
+    buttons.style.display = "none";
+    question.textContent = "Right!";
+    quesCounter++;
+    rightAnswer++;
+    clearInterval(intervalId);
+    if (quesCounter == questLength) {
+        setTimeout(endGame, 1000 * 2);
+    } else {
+        setTimeout(quesAns, 1000 * 2);
+    };
 }
 
 function wrong() {
+    ansBtn.addEventListener("click");
+    buttons.style.display = "none";
+    question.textContent = "Wrong!";    
+    quesCounter++;
+    wrongAnswer++;
+    clearInterval(intervalId);
+    if (quesCounter == questLength) {
+        setTimeout(endGame, 1000 * 2);
+    } else {
+        setTimeout(quesAns, 1000 * 2);
+    };
+}
+
+function endTimer() {
+    ansBtn.addEventListener("click");
+    buttons.style.display = "none";
+    question.textContent = "Wrong!";    
+    quesCounter++;
+    notAnswered++;
+    clearInterval(intervalId);
+    if (quesCounter == questLength) {
+        setTimeout(endGame, 1000 * 2);
+    } else {
+        setTimeout(quesAns, 1000 * 2);
+    };
+}
+
+function endGame() {
     
+}
+
+function resetGame() {
+    quesCounter = 0;
+    rightAnswer = 0;
+    wrongAnswer = 0;
+    notAnswered = 0;
+
+    return quesCounter;
+    return rightAnswer;
+    return wrongAnswer;
+    return notAnswered;
 }
 
 function quesAns(quesCounter) {
