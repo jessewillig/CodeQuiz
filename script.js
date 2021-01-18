@@ -8,6 +8,7 @@ var answer2 = document.querySelector(".answer2");
 var answer3 = document.querySelector(".answer3");
 var answer4 = document.querySelector(".answer4");
 var question = document.querySelector(".question");
+var ansBtn = document.querySelector("#ansBtn");
 var quesCounter = 0;
 // questions/answers
 var questions = [
@@ -32,16 +33,20 @@ var questions = [
         answer: "reverse()"
     }
 ];
+var questLength = questions.length;
 
-homeBtn.addEventListener("click", function() {
-    // If/else statement for home button
-    if (home === true) {
-        // If on home screen, refresh page
-        
-    } else { 
-        // If not on home screen, return to home screen
-        
-    }
+gamePlay.style.display = "none";
+
+playBtn.addEventListener("click", function() {
+    quesAns();
+}
+
+function right() {
+    
+}
+
+function wrong() {
+    
 }
 
 function quesAns(quesCounter) {
@@ -52,5 +57,3 @@ function quesAns(quesCounter) {
     answer3.textContent = questions[quesCounter].options[2];
     answer4.textContent = questions[quesCounter].options[3];
 }
-
-quesAns();
