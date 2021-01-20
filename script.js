@@ -25,9 +25,9 @@ var currentQues;
 // questions/answers
 var questions = [
     {
-        title: "Which of the following is correct about JavaScript?",
-        options: ["JavaScript is a lightweight, interpreted programming language.", "JavaScript has object-oriented capabilities that allows you to build interactivity into otherwise static HTML pages.", "The general-purpose core of the language has been embedded in Netscape, Internet Explorer, and other web browsers.", "All the above."],
-        answer: "All the above."
+        title: "Inside which HTML element do we put the JavaScript?",
+        options: ["<js>", "<script>", "<javascript>", "<scripting>"],
+        answer: "<script>"
     },
     {
         title: "Which of the following is a valid type of function javascript supports?",
@@ -49,36 +49,41 @@ var questLength = questions.length;
 
 // Play button to start the game
 playBtn.addEventListener("click", function () {
-    quesAns();
+    console.log("clicked");
+    quesAns(quesCounter);
 });
 
 // Right answers counter
 function right() {
-        ansBtn.addEventListener("click");
-        buttons.style.display = "none";
+        // ansBtn.addEventListener("click");
+        console.log("inside right");
+        buttons.style.visibility = "hidden";
         question.textContent = "Right!";
         quesCounter++;
         rightAnswer++;
         clearInterval(intervalId);
-        if (quesCounter == questLength) {
+        if (quesCounter === questLength) {
             setTimeout(endGame, 1000 * 2);
         } else {
-            setTimeout(quesAns, 1000 * 2);
+            setTimeout(quesAns(quesCounter), 1000 * 2);
         };
     };
 
 // Wrong answers counter
 function wrong() {
-        ansBtn.addEventListener("click");
-        buttons.style.display = "none";
+        // ansBtn.addEventListener("click");
+        console.log("inside wrong");
+        buttons.style.visibility = "hidden";
         question.textContent = "Wrong!";
         quesCounter++;
         wrongAnswer++;
         clearInterval(intervalId);
-        if (quesCounter == questLength) {
+        if (quesCounter === questLength) {
+            console.log("ques count = ques length");
             setTimeout(endGame, 1000 * 2);
         } else {
-            setTimeout(quesAns, 1000 * 2);
+            console.log("ques count doesn't = ques length");
+            setTimeout(quesAns(quesCounter), 1000 * 2);
         };
     };
 
@@ -126,6 +131,8 @@ function resetGame() {
 
 // Show questions/answers to choose and move to next question
 function quesAns(quesCounter) {
+    console.log("quesCounter = ", quesCounter);
+    buttons.style.visibility = "visible";
     var gameTimer = 60;
     intervalId = setInterval(decrement, 1000);
     function decrement() {
@@ -141,13 +148,15 @@ function quesAns(quesCounter) {
         answer1.textContent = questions[quesCounter].options[0];
         answer2.textContent = questions[quesCounter].options[1];
         answer3.textContent = questions[quesCounter].options[2];
-        answer4.textContent = questions[quesCounter].options[3];
-        ansBtn.addEventListener("click", function() {
-            if (ansBtn.textContent == questions[i].answer) {
-                right();
-            } else {
-                wrong();
-            };
-        });    
+        answer4.textContent = questions[quesCounter].options[3];    
     };
 };
+
+ansBtn.addEventListener("click", function() {
+    console.log(ansBtn.textContent === questions[quesCounter].answer);
+    if (ansBtn.textContent === questions[quesCounter].answer) {
+        right();
+    } else {
+        wrong();
+    };
+});
