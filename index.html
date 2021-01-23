@@ -1,94 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timed Quiz</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
-    <img src="" alt="">
-</head>
-
-<body>
-    <div class=“scores”><a href=“highScores.html”>View Highscores</a></div>
-    <div class=“timer”>Time: <span id=“time”>0</span></div>
-    <div class=“wrapper”>
-      <div id=“start-screen” class=“start”>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Quiz</title>
+    <!-- <link rel="stylesheet" href="./assets/style.css" /> -->
+  </head>
+  <body>
+    <div class="scores"><a href="highscores.html">View Highscores</a></div>
+    <div class="timer">Time: <span id="time">0</span></div>
+    <div class="wrapper">
+      <div id="start-screen" class="start">
         <h1>Coding Quiz Challenge</h1>
         <p>
-          You have 60 seconds to answer the following question right!
+          Try to answer the following code-related questions within the time
+          limit. Keep in mind that incorrect answers will penalize your
+          score/time by ten seconds!
         </p>
-        <button id=“start”>Start Quiz</button>
+        <button id="start">Start Quiz</button>
       </div>
-      <div id=“questions” class=“hide”>
-        <h2 id=“question-title”></h2>
-        <div id=“choices” class=“choices”></div>
+      <div id="questions" class="hide">
+        <h2 id="question-title"></h2>
+        <div id="choices" class="choices"></div>
       </div>
-      <div id=“end-screen” class=“hide”>
+      <div id="end-screen" class="hide">
         <h2>All done!</h2>
-        <p>Your final score is <span id=“final-score”></span>.</p>
+        <p>Your final score is <span id="final-score"></span>.</p>
         <p>
-          Enter initials: <input type=“text” id=“initials” max=“3” />
-          <button id=“submit”>Submit</button>
+          Enter initials: <input type="text" id="initials" max="3" />
+          <button id="submit">Submit</button>
         </p>
       </div>
-      <div id=“feedback” class=“feedback hide”></div>
+      <div id="feedback" class="feedback hide"></div>
     </div>
-    <!-- <nav class="navBar">
-        <button class="homeBtn" type="button">Home</button>
-        <button class="scoresBtn" type="button">High Scores</button>
-        <h1 class="header">Javascript Quiz Time!</h1>
-    </nav>
-    <div class="timer">
-        <table id=timer>
-            <tr>
-                <td id="timer-text"></td>
-                <td> <span id="gameTimer" class="nav-item"></span> </td>
-            </tr>
-        </table>
-    </div>
-    <main>
-        <div class="container startQuiz">
-            <div class="row-10">
-                <div class="col-md-10">
-                    <h2>You have 60 seconds to answer the following questions right!</h2>
-                </div>
-            </div>
-            <div class="row-10">
-
-                <div class="col-md">
-                    <button class="startBtn" type="button">Start</button>
-                </div>
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md">
-                    <button class="scoresBtn" type="button">High Scores</button>
-                </div>
-            </div>
-        </div>
-        <div class="container quizPage">
-            <div class="row-10">
-                <div class="col-md-10">
-                    <h2 class="questionPage"></h2>
-                </div>
-            </div>
-            <div class="row-10">
-
-                <div class="col-md buttons">
-                    <button class="choices" id="ansBtn1" type="button"></button>
-                    <button class="choices" id="ansBtn2" type="button"></button>
-                    <button class="choices" id="ansBtn3" type="button"></button>
-                    <button class="choices" id="ansBtn4" type="button"></button>
-                </div>
-            </div>
-        </div>
-    </main> -->
-
-    <!-- <script src="./assets/scores.js"></script> -->
-
-</body>
-<script src="./assets/script.js"></script>
+    <script src="./assets/script.js"></script>
+  </body>
 </html>

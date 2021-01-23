@@ -43,7 +43,7 @@
     width: 40vw;
     height: 25vh;
 }
-.startBtn {
+#start {
     font-family: 'Viga', sans-serif;
     font-size: large;
     float: left;
@@ -55,7 +55,7 @@
     height: 50px;
     width: 150px;
 }
-.startBtn:hover {
+#start:hover {
     background-color: rgb(138, 132, 133);
     border: 5px solid rgb(138, 132, 133);
 }
@@ -83,6 +83,6 @@ h2 {
 body {
     background-image: url(https://image.freepik.com/free-vector/blue-sky-with-lens-flare-bokeh-background_87521-1563.jpg);
     background: no-repeat;
-    
+
 
 }
