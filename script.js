@@ -9,12 +9,14 @@ var startPage = document.querySelector(".startPage")
 // Page that hides the "home" page and shows the questions and answers to pick
 var gamePlay = document.querySelector(".gamePlay")
 // Answers 1, 2, 3 & 4 buttons
-var answer1 = document.querySelector(".answer1");
-var answer2 = document.querySelector(".answer2");
-var answer3 = document.querySelector(".answer3");
-var answer4 = document.querySelector(".answer4");
+
+// variables to reference DOM elements 
+var ansBtn1 = document.querySelector("#ansBtn1");
+var ansBtn2 = document.querySelector("#ansBtn2");
+var ansBtn3 = document.querySelector("#ansBtn3");
+var ansBtn4 = document.querySelector("#ansBtn4");
 var question = document.querySelector(".question");
-var ansBtn = document.querySelector("#ansBtn");
+var answer = document.querySelector(".answer");
 var buttons = document.querySelector(".buttons");
 var quesCounter = 0;
 var intervalId;
@@ -22,26 +24,34 @@ var rightAnswer = 0;
 var wrongAnswer = 0;
 var notAnswered = 0;
 var currentQues;
+
+// timer varaibles
+// variables to keep track of quiz state
+var currentQuestionINDEX = 0;
+var time = questions.length *15;
+var timerId; 
+
+
 // questions/answers
 var questions = [
     {
         title: "Inside which HTML element do we put the JavaScript?",
-        options: ["<js>", "<script>", "<javascript>", "<scripting>"],
+        choices: ["<js>", "<script>", "<javascript>", "<scripting>"],
         answer: "<script>"
     },
     {
         title: "Which of the following is a valid type of function javascript supports?",
-        options: ["Named function", "Anonymous function", "Both of the above.", "None of the above."],
+        choices: ["Named function", "Anonymous function", "Both of the above.", "None of the above."],
         answer: "Both of the above."
     },
     {
         title: "Which built-in method removes the last element from an array and returns that element?",
-        options: ["last()", "get()", "pop()", "None of the above."],
+        choices: ["last()", "get()", "pop()", "None of the above."],
         answer: "pop()"
     },
     {
         title: "Which built-in method reverses the order of the elements of an array?",
-        options: ["changeOrder(order)", "reverse()", "sort(order)", "None of the above."],
+        choices: ["changeOrder(order)", "reverse()", "sort(order)", "None of the above."],
         answer: "reverse()"
     }
 ];
@@ -49,13 +59,14 @@ var questLength = questions.length;
 
 // Play button to start the game
 playBtn.addEventListener("click", function () {
+    startPage.style.display = "none";
     console.log("clicked");
     quesAns(quesCounter);
 });
 
 // Right answers counter
 function right() {
-        // ansBtn.addEventListener("click");
+        answer.addEventListener("click");
         console.log("inside right");
         buttons.style.visibility = "hidden";
         question.textContent = "Right!";
@@ -71,10 +82,10 @@ function right() {
 
 // Wrong answers counter
 function wrong() {
-        // ansBtn.addEventListener("click");
-        console.log("inside wrong");
-        buttons.style.visibility = "hidden";
-        question.textContent = "Wrong!";
+        // answer.addEventListener("click");
+        console.log("wrong");
+        // buttons.style.visibility = "hidden";
+        // question.textContent = "Wrong!";
         quesCounter++;
         wrongAnswer++;
         clearInterval(intervalId);
@@ -105,12 +116,12 @@ function endTimer() {
 // End game, total up right, wrong and not answered questions.
 function endGame() {
     gamePlay.style.display = "block";
-    showQuestion.textContent = "Game Over! Here's your score.";
-    answer1.textContent = "Correct answers: " + rightAnswer;
-    answer2.textContent = "Wrong answers: " + wrongAnswer;
-    answer3.textContent = "Not answered: " + notAnswered;
-    answer4.textContent = "Play Again!";
-    answer4.addEventListener("click", function () {
+    question.textContent = "Game Over! Here's your score.";
+    ansBtn1.textContent = "Correct answers: " + rightAnswer;
+    ansBtn2.textContent = "Wrong answers: " + wrongAnswer;
+    ansBtn3.textContent = "Not answered: " + notAnswered;
+    ansBtn4.textContent = "Play Again!";
+    ansBtn4.addEventListener("click", function () {
         resetGame();
         quesDisplay();
     });
@@ -145,18 +156,18 @@ function quesAns(quesCounter) {
     for (var i = 0; i < questLength; i++) {
         gamePlay.style.display = "block";
         question.textContent = questions[quesCounter].title;
-        answer1.textContent = questions[quesCounter].options[0];
-        answer2.textContent = questions[quesCounter].options[1];
-        answer3.textContent = questions[quesCounter].options[2];
-        answer4.textContent = questions[quesCounter].options[3];    
+        ansBtn1.textContent = questions[quesCounter].options[0];
+        ansBtn2.textContent = questions[quesCounter].options[1];
+        ansBtn3.textContent = questions[quesCounter].options[2];
+        ansBtn4.textContent = questions[quesCounter].options[3];    
+        answer.addEventListener("click", function() {
+            // console.log(answer.textContent === questions[quesCounter].answer);
+            console.log("clicked");
+            if (answer.textContent === questions[quesCounter].answer) {
+                right();
+            } else {
+                wrong();
+            };
+        });
     };
 };
-
-ansBtn.addEventListener("click", function() {
-    console.log(ansBtn.textContent === questions[quesCounter].answer);
-    if (ansBtn.textContent === questions[quesCounter].answer) {
-        right();
-    } else {
-        wrong();
-    };
-});

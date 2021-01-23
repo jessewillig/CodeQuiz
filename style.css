@@ -64,7 +64,7 @@ h2 {
     color: rgba(0, 162, 182, 1);
     font-family: 'Viga', sans-serif;
 }
-#ansBtn {
+.answer {
     font-family: 'Viga', sans-serif;
     font-size: large;
     float: left;
@@ -76,7 +76,7 @@ h2 {
     height: 50px;
     width: 150px;
 }
-#ansBtn:hover {
+.answer:hover {
     background-color: rgb(138, 132, 133);
     border: 5px solid rgb(138, 132, 133);
 }
