@@ -13,6 +13,12 @@ var submitBtn = dpcument.getElementById("submit");
 var startBtn = document.getElementsByClassName("start");
 var intialsEl = document.getElementById("intials");
 var feedbackEl = document.getElementById("feedback");
+var ansBtn1 = document.getElementById("#ansBtn1");
+var ansBtn2 = document.getElementById("#ansBtn2");
+var ansBtn3 = document.getElementById("#ansBtn3");
+var ansBtn4 = document.getElementById("#ansBtn4");
+var questionPage = document.getElementsByClassName(".questionPage");
+var choicesBtn = document.getElementsByClassName(".choices");
 
 // variables for questions
 
