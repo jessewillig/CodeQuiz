@@ -4,12 +4,13 @@ function printHighscores() {
 
     // sort highscores by score property in descending order
     highscores.sort(function (a, b) {
-        return b.score - a.score;
+        return b.score - a.score; ß
     });
 
     highscores.forEach(function (score) {
         // create li tag for each high score
         var liTag = document.createElement("li");
+        liTag.setAttribute("class", "newLi")
         liTag.textContent = score.initials + " - " + score.score;
 
         // display on page 

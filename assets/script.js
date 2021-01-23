@@ -7,6 +7,7 @@ var submitBtn = document.getElementById("submit");
 var startBtn = document.getElementById("start");
 var initialsEl = document.getElementById("initials");
 var feedbackEl = document.getElementById("feedback");
+var endScreenEl = document.getElementById("end-screen");
 
 // variables for questions
 var questions = [
@@ -45,7 +46,9 @@ var timerId;
 function startQuiz() {
     // hide the start screen when you hit play
     var startScreenEl = document.getElementById("start-screen");
-    startScreenEl.setAttribute("class", "hide");
+    startScreenEl.style.display = "none";
+
+    // endScreenEl.style.display = "none";
 
     // un-hide question section 
     questionsEl.removeAttribute("class");

@@ -1,7 +1,7 @@
 body {
     background-image: url(https://image.freepik.com/free-vector/blue-sky-with-lens-flare-bokeh-background_87521-1563.jpg);
 }
-h1, p, h2, .feedback {
+h1, p, h2, .feedback, .newLi {
     text-align: center;
     color: rgba(0, 162, 182, 1);
     font-family: 'Yusei Magic', sans-serif;
@@ -11,7 +11,7 @@ h1, p, h2, .feedback {
     color: rgba(0, 162, 182, 1);
     font-family: 'Yusei Magic', sans-serif;
 }
-#start, .choice {
+#start, .choice, #home, #clear {
     font-family: 'Yusei Magic', sans-serif;
     color: rgba(0, 162, 182, 1);
     background-color: rgb(94, 86, 87);
@@ -21,7 +21,7 @@ h1, p, h2, .feedback {
     margin: auto auto;
     display: block;
 }
-#start:hover, .choice:hover {
+#start:hover, .choice:hover, #home:hover, #clear:hover {
     background-color: rgb(138, 132, 133);
     border: 5px solid rgb(138, 132, 133);
 }
