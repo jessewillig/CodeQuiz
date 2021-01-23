@@ -1,4 +1,48 @@
-.homeBtn {
+body {
+    background-image: url(https://image.freepik.com/free-vector/blue-sky-with-lens-flare-bokeh-background_87521-1563.jpg);
+}
+h1, p, h2, .feedback {
+    text-align: center;
+    color: rgba(0, 162, 182, 1);
+    font-family: 'Yusei Magic', sans-serif;
+}
+.timer, .scores {
+    text-align: left;
+    color: rgba(0, 162, 182, 1);
+    font-family: 'Yusei Magic', sans-serif;
+}
+#start, .choice {
+    font-family: 'Yusei Magic', sans-serif;
+    color: rgba(0, 162, 182, 1);
+    background-color: rgb(94, 86, 87);
+    border-radius: 10px;
+    border: 5px solid rgb(94, 86, 87);
+    box-shadow: 3px 3px rgba(199, 199, 199, .5);
+    margin: auto auto;
+    display: block;
+}
+#start:hover, .choice:hover {
+    background-color: rgb(138, 132, 133);
+    border: 5px solid rgb(138, 132, 133);
+}
+#submit {
+    font-family: 'Yusei Magic', sans-serif;
+    color: rgba(0, 162, 182, 1);
+    background-color: rgb(94, 86, 87);
+    border-radius: 10px;
+    border: 5px solid rgb(94, 86, 87);
+    box-shadow: 3px 3px rgba(199, 199, 199, .5);
+}
+#submit:hover {
+    background-color: rgb(138, 132, 133);
+    border: 5px solid rgb(138, 132, 133);
+}
+
+
+
+
+
+/* .homeBtn {
     font-family: 'Viga', sans-serif;
     font-size: large;
     float: left;
@@ -11,22 +55,6 @@
     width: 150px;
 }
 .homeBtn:hover {
-    background-color: rgb(138, 132, 133);
-    border: 5px solid rgb(138, 132, 133);
-}
-.scoresBtn {
-    font-family: 'Viga', sans-serif;
-    font-size: large;
-    float: right;
-    color: rgba(0, 162, 182, 1);
-    background-color: rgb(94, 86, 87);
-    border-radius: 10px;
-    border: 5px solid rgb(94, 86, 87);
-    box-shadow: 3px 3px rgba(199, 199, 199, .5);
-    height: 50px;
-    width: 150px;
-}
-.scoresBtn:hover {
     background-color: rgb(138, 132, 133);
     border: 5px solid rgb(138, 132, 133);
 }
@@ -79,10 +107,4 @@ h2 {
 .choices:hover {
     background-color: rgb(138, 132, 133);
     border: 5px solid rgb(138, 132, 133);
-}
-body {
-    background-image: url(https://image.freepik.com/free-vector/blue-sky-with-lens-flare-bokeh-background_87521-1563.jpg);
-    background: no-repeat;
-
-
-}
+} */

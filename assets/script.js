@@ -35,7 +35,7 @@ var questions = [
 // This is our logic 
 // variables to keep track of quiz state
 var currentQuestionIndex = 0;
-var time = questions.length * 15; 
+var time = questions.length * 15;
 var timerId;
 
 
@@ -67,7 +67,7 @@ function getQuestions() {
     //     ansBtn2.textContent = questions[currentQuestionIndex].choices[1];
     //     ansBtn3.textContent = questions[currentQuestionIndex].choices[2];
     //     ansBtn4.textContent = questions[currentQuestionIndex].choices[3];
-        
+
     // };
     // get current question object from the array
     var currentQuestion = questions[currentQuestionIndex];
@@ -80,7 +80,7 @@ function getQuestions() {
     choicesEl.innerHTML = "";
 
     // loop over the question choices
-    currentQuestion.choices.forEach(function(choice, i) {
+    currentQuestion.choices.forEach(function (choice, i) {
         // create new button for each choice
         var choiceNode = document.createElement("button");
         choiceNode.setAttribute("class", "choice");
@@ -98,38 +98,39 @@ function getQuestions() {
 // function for the action of clicking questions 
 
 function questionClick() {
- // check if the user guessed wrong or answered wrong
-if (this.value !== questions[currentQuestionIndex].answer) {
-// decrease time by 15 
-time -= 15;
-if (time < 0){
-    time =0;
-}
- // display new time on page
-timerEl.textContent = time;
+    // check if the user guessed wrong or answered wrong
+    if (this.value !== questions[currentQuestionIndex].answer) {
+        // decrease time by 15 
+        time -= 15;
+        if (time < 0) {
+            time = 0;
+        }
+        // display new time on page
+        timerEl.textContent = time;
 
-feedbackEl.textContent = "Wrong";
+        feedbackEl.textContent = "Wrong";
 
 
- } else {
-     feedbackEl.textContent = "Correct";
- }
+    } else {
+        feedbackEl.textContent = "Correct";
+    }
 
- // display correct or incorrect response
- feedbackEl.setAttribute("class", "feedback");
- setTimeout(function() {
-     feedbackEl.setAttribute("class", "feedback hide")
-;}, 1000);
+    // display correct or incorrect response
+    feedbackEl.setAttribute("class", "feedback");
+    setTimeout(function () {
+        feedbackEl.setAttribute("class", "feedback hide")
+            ;
+    }, 1000);
 
-// move to next question by incrementing 
-currentQuestionIndex++;
+    // move to next question by incrementing 
+    currentQuestionIndex++;
 
-// check if we're at the end of our questionaire 
-if (currentQuestionIndex === questions.length) {
-quizEnd();
-} else {
-    getQuestions();
-}
+    // check if we're at the end of our questionaire 
+    if (currentQuestionIndex === questions.length) {
+        quizEnd();
+    } else {
+        getQuestions();
+    }
 }
 
 
@@ -165,7 +166,7 @@ function saveHighscore() {
     // get value of the input box
     var initials = initialsEl.value.trim();
     // make sure there is an actual value 
-    if (initials !== "") { 
+    if (initials !== "") {
         // get scores from localstorage, make sure to parse, and if there is no values set to empty array
         var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
 
@@ -185,7 +186,7 @@ function saveHighscore() {
 };
 
 function checkForEnter(event) {
-    if(event.key === "Enter") {
+    if (event.key === "Enter") {
         saveHighscore();
     }
 }
