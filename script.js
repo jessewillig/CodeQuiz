@@ -156,10 +156,10 @@ function quesAns(quesCounter) {
     for (var i = 0; i < questLength; i++) {
         gamePlay.style.display = "block";
         question.textContent = questions[quesCounter].title;
-        ansBtn1.textContent = questions[quesCounter].options[0];
-        ansBtn2.textContent = questions[quesCounter].options[1];
-        ansBtn3.textContent = questions[quesCounter].options[2];
-        ansBtn4.textContent = questions[quesCounter].options[3];    
+        ansBtn1.textContent = questions[quesCounter].choices[0];
+        ansBtn2.textContent = questions[quesCounter].choices[1];
+        ansBtn3.textContent = questions[quesCounter].choices[2];
+        ansBtn4.textContent = questions[quesCounter].choices[3];    
         answer.addEventListener("click", function() {
             // console.log(answer.textContent === questions[quesCounter].answer);
             console.log("clicked");

@@ -14,6 +14,31 @@ var startBtn = document.getElementsByClassName("start");
 var intialsEl = document.getElementById("intials");
 var feedbackEl = document.getElementById("feedback");
 
+// variables for questions
+
+var questions = [
+    {
+        title: "Inside which HTML element do we put the JavaScript?",
+        choices: ["<js>", "<script>", "<javascript>", "<scripting>"],
+        answer: "<script>"
+    },
+    {
+        title: "Which of the following is a valid type of function javascript supports?",
+        choices: ["Named function", "Anonymous function", "Both of the above.", "None of the above."],
+        answer: "Both of the above."
+    },
+    {
+        title: "Which built-in method removes the last element from an array and returns that element?",
+        choices: ["last()", "get()", "pop()", "None of the above."],
+        answer: "pop()"
+    },
+    {
+        title: "Which built-in method reverses the order of the elements of an array?",
+        choices: ["changeOrder(order)", "reverse()", "sort(order)", "None of the above."],
+        answer: "reverse()"
+    }
+];
+
 // start Quiz function, a way to start the quiz 
 
 function startQuiz() {
@@ -30,45 +55,52 @@ function startQuiz() {
     // shwo starting time
     timerEl.textContent = time;
     getQuestions();
-}
+};
 
 // a function for retreiving the questions
 function getQuestions() {
-
+    buttons.style.display = "block";
+    for (var i = 0; i < questions.length; i++) {
+        ansBtn1.textContent = questions[].choices[0];
+        ansBtn2.textContent = questions[].choices[1];
+        ansBtn3.textContent = questions[].choices[2];
+        ansBtn4.textContent = questions[].choices[3];
+        
+    };
 }
-
+;
 // function for the action of clicking questions 
 
 function questionClick {
 
-}
+};
 
 // function for right or wrong answer, a second you get feedback
 feedbackEl.setAttribute("class", "feedback");
 setTimeout(function() {
-    feedbackEl.setAttribute
-})
+    feedbackEl.setAttribute;
+});
 
 // function for ending the quiz
 function quizEnd() {
 
-}
+};
 
 // function that shows some sort of clock ticking 
 function clockTick() {
 
-}
+};
 
 // function for saving highscores
 function saveHighscore() {
 
-}
+};
 
 function checkForEnter(event) {
     if(event.key === "Enter") {
         saveHighscore();
-    }
-}
+    };
+};
 
 // user clicks button to submit intials 
 submitBtn.onclick = saveHighscore;
