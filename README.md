@@ -1,4 +1,4 @@
-# HW4-CodeQuiz
+# CodeQuiz
 
 ## Description
 
